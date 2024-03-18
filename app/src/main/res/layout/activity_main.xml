@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_image"
+        app:layout_constraintEnd_toStartOf="@id/btnSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPhoto" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGallery"
+        app:layout_constraintTop_toBottomOf="@id/ivPhoto" />
+
+    <TextView
+        android:id="@+id/brightness_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/brightness"
+        app:layout_constraintBottom_toBottomOf="@id/slBrightness"
+        app:layout_constraintEnd_toStartOf="@id/slBrightness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slBrightness" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slBrightness"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/brightness_txt"
+        app:layout_constraintTop_toBottomOf="@id/btnGallery" />
+
+    <TextView
+        android:id="@+id/contrast_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/contrast"
+        app:layout_constraintBottom_toBottomOf="@id/slContrast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slContrast" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slContrast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/slBrightness"
+        app:layout_constraintTop_toBottomOf="@id/slBrightness" />
+
+    <TextView
+        android:id="@+id/saturation_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/saturation"
+        app:layout_constraintBottom_toBottomOf="@id/slSaturation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slSaturation" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slSaturation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/slBrightness"
+        app:layout_constraintTop_toBottomOf="@id/slContrast" />
+
+    <TextView
+        android:id="@+id/gamma_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/gamma"
+        app:layout_constraintBottom_toBottomOf="@id/slGamma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slGamma" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slGamma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/slBrightness"
+        app:layout_constraintTop_toBottomOf="@id/slSaturation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
